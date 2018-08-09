@@ -4,10 +4,6 @@
     #define button 4
     #define CH1 3
     #define RANGE 10000
-    const byte ledPin = 13;
-    volatile byte state = LOW;
-    int rotDirection = 0;
-    int pressed = false;
     void setup() {
       pinMode(enA, OUTPUT);
       pinMode(in1, OUTPUT);
@@ -18,7 +14,7 @@
       // Set initial rotation direction
       digitalWrite(in1, LOW);
       digitalWrite(in2, HIGH);
-      attachInterrupt(digitalPinToInterrupt(CH1), blink, CHANGE);
+      attachInterrupt(digitalPinToInterrupt(CH1), ch1_interrupt, CHANGE);
       
       Serial.begin(9600);
     }
@@ -31,7 +27,7 @@
     volatile int oldCh;
     volatile int microsStart=0;
     volatile int readout =0; 
-    void blink() {
+    void ch1_interrupt() {
       volatile int ch = digitalRead(CH1);
       if (ch==1 && oldCh==0)
       {
@@ -44,18 +40,17 @@
         
       }
       oldCh = ch;
-      state = !state;
     }
 
 
     
     void loop() {
       
-      int setPoint = map(readout, 1200, 1700, -RANGE, RANGE);
+      int setPoint = map(readout, 1000, 1700, -RANGE, RANGE);
       //Serial.println(setPoint);
      
-      int potValue = analogRead(A0); // Read potentiometer value    
-      int input = map(potValue, 100, 900, -RANGE , RANGE);     
+      int potValue = analogRead(A1); // Read potentiometer value    
+      int input = map(potValue, 200, 750, -RANGE , RANGE);     
       //Serial.println(input);
      
       int error = input - setPoint;
