@@ -1,6 +1,10 @@
 # arduino_servo
 Simple DC Motor Servo using Arduino
 
+
+
+[![particle_filter_cuda](https://img.youtube.com/vi/U2JLreqX3EY/0.jpg)](https://www.youtube.com/watch?v=U2JLreqX3EY)
+
 ## Motivation
 
 Building very, very, very large RC Servo
@@ -24,6 +28,10 @@ ch1_interrupt is called when state of reciever input is changed. Than pulse widt
 
 ## Plots
 Arduino sends over port controll setpoint and measurment. Thus it can be plotted.
+### Step Response
+![alt text](https://raw.githubusercontent.com/michalpelka/arduino_servo/master/plots/step.png)
+### Sinusoidal Response
+![alt text](https://raw.githubusercontent.com/michalpelka/arduino_servo/master/plots/sin.png)
 
 # Issues
 If you experience contant movement, please check if feedback (rotary encoder is connected in right direction).
