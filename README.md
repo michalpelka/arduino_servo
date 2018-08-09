@@ -3,7 +3,7 @@ Simple DC Motor Servo using Arduino
 
 
 
-[![particle_filter_cuda](https://img.youtube.com/vi/U2JLreqX3EY/0.jpg)](https://www.youtube.com/watch?v=U2JLreqX3EY)
+[![particle_filter_cuda](https://img.youtube.com/vi/j1zosktqNGo/0.jpg)](https://www.youtube.com/watch?v=j1zosktqNGo)
 
 ## Motivation
 
