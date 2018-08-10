@@ -15,13 +15,13 @@ Standard PPM signal (like classic RC Servo)
 
 ## Output
 Driving signal for H-Bridge
-D9 - PWM output
-D6 - direction Left
-D7 - direction Right
+- D9 - PWM output
+- D6 - direction Left
+- D7 - direction Right
 
 ## Feedback
 Rotary Potentiometr
-A1 - signal from rotary potentiometer
+- A1 - signal from rotary potentiometer
 
 ## Regulation
 ch1_interrupt is called when state of reciever input is changed. Than pulse width is measured. That value is mapped to input value of P controller. That P controller works output mapped to PWM generator and two direction output. Those outputs are controlling motor H-Bridge IC (like VNH 5019)
