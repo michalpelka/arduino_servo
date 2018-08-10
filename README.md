@@ -27,13 +27,17 @@ A1 - signal from rotary potentiometer
 ch1_interrupt is called when state of reciever input is changed. Than pulse width is measured. That value is mapped to input value of P controller. That P controller works output mapped to PWM generator and two direction output. Those outputs are controlling motor H-Bridge IC (like VNH 5019)
 
 ## Plots
-Arduino sends over port controll setpoint and measurment. Thus it can be plotted.
+Arduino sends over port control setpoint and measurment. Thus it can be plotted.
 ### Step Response
 ![alt text](https://raw.githubusercontent.com/michalpelka/arduino_servo/master/plots/step.png)
 ### Sinusoidal Response
 ![alt text](https://raw.githubusercontent.com/michalpelka/arduino_servo/master/plots/sin.png)
 
 # Issues
-If you experience contant movement, please check if feedback (rotary encoder is connected in right direction).
+If you experience constant movement, please check if feedback (rotary potentiometer is connected in right direction).
+
+# Road Map
+- Support for multiple RC channels (max 2), maybe SBUS
+- Digital outputs
 
 
